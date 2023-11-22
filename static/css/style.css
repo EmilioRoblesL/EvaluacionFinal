@@ -39,3 +39,7 @@ form {
         button:hover {
             background-color: #4169E1;
         }
+        p {
+            text-align: left;
+            margin-top: 15px;
+        }
