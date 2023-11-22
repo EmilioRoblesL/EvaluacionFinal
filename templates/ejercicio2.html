@@ -2,9 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
 </head>
 <body>
+    <form method="post" action="{{ url_for('ejercicio2') }}">
+        <h1>Inicio de sesión</h1>
+        <label for="usuario">Ingresa tu nombre:</label>
+        <input type="text" id="usuario" name="usuario" required><br>
 
+        <label for="contrasena">Ingresa tu contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required><br>
+
+        <button type="submit">Verificar</button>
+
+        {% if mensaje %}
+        <p>{{ mensaje }}</p>
+    {% endif %}
+    </form>
 </body>
 </html>

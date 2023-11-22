@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Color de fondo */
+    }
+    form {
+        background-color: #fff; /* Color del formulario */
+        border: 1px solid #ccc; /* Borde del formulario */
+        border-radius: 10px; /* Bordes curvados */
+        padding: 20px;
+        width: 100%; /* Ajusta el ancho del formulario según tus necesidades */
+        max-width: 500px; /* Puedes establecer un ancho máximo para evitar que el formulario se extienda demasiado en pantallas grandes */
+        margin: 0 auto; /* Centra el formulario en la página */
+
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: center; /* Centra el texto dentro de las etiquetas label */
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc; /* Borde del input */
+            border-radius: 5px; /* Bordes curvados del input */
+        }
+        button {
+            background-color: rgb(0, 128, 199); /* Color del botón */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px; /* Bordes curvados del botón */
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4169E1; /* Cambia de color al pasar el ratón */
+        }

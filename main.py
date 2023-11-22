@@ -39,9 +39,22 @@ def ejercicio1():
     return render_template('ejercicio1.html', nombre=nombre, total_sin_descuento=total_sin_descuento,
                            total_con_descuento=total_con_descuento, descuento_aplicado=descuento_aplicado)
 
-@app.route('/ejercicio2')  # Agregamos la ruta para ejercicio2
+@app.route('/ejercicio2', methods=['GET', 'POST'])
 def ejercicio2():
-    return "Contenido del ejercicio 2"
+    mensaje = ''
+
+    if request.method == 'POST':
+        usuario = request.form.get('usuario')
+        contrasena = request.form.get('contrasena')
+
+        if usuario == 'juan' and contrasena == 'admin':
+            mensaje = 'Bienvenido Administrador juan'
+        elif usuario == 'pepe' and contrasena == 'user':
+            mensaje = 'Bienvenido Usuario pepe'
+        else:
+            mensaje = 'Usuario o contraseña incorrectos'
+
+    return render_template('ejercicio2.html', mensaje=mensaje)
 
 if __name__ == '__main__':
     app.run(debug=True)
