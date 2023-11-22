@@ -18,20 +18,20 @@ def ejercicio1():
         edad = int(request.form.get('edad'))
         tarros = int(request.form.get('tarros'))
 
-        # Calcular el total sin descuento
+        # Calcular el total sin des
         total_sin_descuento = tarros * 9000
 
-        # Calcular descuento según la edad
+        # Calcular desc según la edad
         descuento = 0
         if 18 <= edad <= 30:
             descuento = 0.15
         elif edad > 30:
             descuento = 0.25
 
-        # Calcular el descuento en pesos
+        # Calcular el des en pesos
         descuento_en_pesos = total_sin_descuento * descuento
 
-        # Aplicar descuento al total
+        # Aplicar des al total
         total_con_descuento = total_sin_descuento - descuento_en_pesos
 
         descuento_aplicado = descuento_en_pesos
